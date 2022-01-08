@@ -20,3 +20,8 @@ EMail,Through Phone and even Through Google
 * Delete a user
 
 # Screenshots
+
+<img src="https://user-images.githubusercontent.com/50077510/148657877-ab5509c0-d19b-4b9a-b940-20a2332dd6e4.jpeg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/50077510/148657881-7699a01d-65da-42e6-a3f8-e2fb586636cb.jpeg" width="200" height="400"> 
+
+https://user-images.githubusercontent.com/50077510/148657989-faf5bd1a-1651-4fe2-b7ca-4cb4bcc8d0e7.mp4
+
