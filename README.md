@@ -9,9 +9,7 @@ EMail,Through Phone and even Through Google
 
 ## More Features to add
 * Verify user's email
-* Sign-in with Google log-in
 * Sign-in with Facebook log-in
-* Sign-in with Twitter log-in
 * Sign-in with Anonymous
 * Update user's profile
 * Update user's email
