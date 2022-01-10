@@ -12,7 +12,7 @@ import java.lang.Exception
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-    private lateinit var auth: FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,26 +21,33 @@ class RegisterActivity : AppCompatActivity() {
 
 
         // Hide Status Bar
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
 
-        auth = FirebaseAuth.getInstance()
+        mAuth = FirebaseAuth.getInstance()
 
         binding.registerBtn.setOnClickListener {
 
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Account registered successfully", Toast.LENGTH_SHORT).show()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Account registered successfully", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+
+                }.addOnFailureListener {
+                    Toast.makeText(this, "Please enter a valid email address and password", Toast.LENGTH_SHORT).show()
                 }
-
-            }.addOnFailureListener {
-                Toast.makeText(this, "Failed! Try Again", Toast.LENGTH_SHORT).show()
+            }else {
+                Toast.makeText(this, "Please enter a valid email address and password", Toast.LENGTH_SHORT).show()
             }
-
         }
 
 
