@@ -40,21 +40,16 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
 
-        // If Username & Password is empty then show toast
-
-
-
-
 
         // Sending User to UserProfile if already login
         Handler().postDelayed({
-            if (user == null) {
+            if (user != null) {
                 startActivity(Intent(this@MainActivity, UserProfile_Activity::class.java))
                 finish()
             } else {
                 null
             }
-        }, 2000)
+        }, 1000)
 
 
         // Calling Function to Login With Google
