@@ -7,7 +7,8 @@ import android.view.View
 import android.widget.Toast
 import com.axat.firebaseauthentication.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
-import java.lang.Exception
+import com.facebook.FacebookSdk
+import com.facebook.appevents.AppEventsLogger
 
 class RegisterActivity : AppCompatActivity() {
 

@@ -88,28 +88,26 @@
             android:id="@+id/googleSignInBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:layout_marginLeft="30sp"
             android:layout_marginTop="15sp"
             android:layout_marginRight="15sp"
             android:layout_marginBottom="15sp"
             android:layout_weight="1"
             android:background="@drawable/layout_bg_main"
-            android:gravity="center"
             android:src="@drawable/ic_googleicon" />
 
         <ImageButton
+            android:id="@+id/facebookSignInBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:layout_marginLeft="15sp"
             android:layout_marginTop="15sp"
             android:layout_marginRight="30sp"
             android:layout_marginBottom="15sp"
             android:layout_weight="1"
             android:background="@drawable/layout_bg_main"
-            android:gravity="center"
             android:src="@drawable/ic_facebookicon" />
+
 
     </LinearLayout>
 
